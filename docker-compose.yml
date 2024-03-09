@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  qdrant:
+    extends:
+      file: ./docker-compose-qdrant.yml
+      service: qdrant
+
+configs:
+  qdrant_config:
+    content: |
+      log_level: INFO
+
+volumes:
+  qdrant_data:
